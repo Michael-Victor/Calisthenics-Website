@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Calisthenics Community</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  padding: 50px;
+  text-align: center;
+  background: #14274e;
+  color: #f1f6f9;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0;
+  overflow: hidden; 
+  background-color: #394867; 
+}
+
+
+.navbar a {
+  
+  float: left; 
+  display: block; 
+  color: #f1f6f9; 
+  text-align: center; 
+  padding: 14px 20px; 
+  text-decoration: none;
+}
+
+
+.navbar a.right {
+  
+  float: right; 
+}
+
+
+.navbar a:hover {
+  background-color: #f1f6f9; 
+  color: #394867; 
+}
+
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: -100px;
+  width: 300px;
+  border: 3px;
+  color: #394867;
+}
+
+div.what {
+  padding: 100px;
+  
+}
+
+div.about {
+  
+  
+  
+  
+}
+
+.split {
+  display: inline-block;
+  height: 100%;
+  width: 40%;
+  border: 15px solid-gray;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  
+}
+
+
+.left {
+  left: 0;
+  
+  padding: 0px 100px;
+  
+  
+}
+
+
+.righ {
+  right: 0;
+  
+  padding: 0px 0px;
+  
+}
+
+.events h1 {
+  padding: 70px 0px 0px 0px;
+  text-align: center;
+  font-family: Housky;
+  font-size: 65px;
+  color: #14274e;
+}
+
+.des {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:750px; top:0px;}
+  50%  {background-color:blue; left:1500px; top:0px;}
+  75%  {background-color:green; left:750px; top:0px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+th {
+  text-align: left;
+}
+
+.reg {
+width: 500px;
+background-color: #14274e;
+color: #f1f6f9;
+position: relative;
+left: 500px;
+}
+
+.column { 
+                float: left; 
+                width: 50%; 
+               height: 100px; 
+               background-color: #14274e;
+            } 
+.column p { 
+                color: #f1f6f9;
+                font-weight:bold; 
+            } 
+.column li { 
+                color: #f1f6f9;
+                font-weight:bold; 
+            } 
+.column a { 
+                color: #f1f6f9;
+                font-weight:bold; 
+            } 
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+
+</head>
+
+<body ng-app="myapp">
+
+<div class="header">
+
+<h1>CALISTHENICS COMMUNITY</h1>
+
+</div>
+
+<div class="navbar">
+  <a href="#abt">About</a>
+  <a href="#eve">Events</a>
+  <a href="#regi">Register</a>
+  <a href="cali1.html" class="right">Sign up</a>
+</div>
+
+<h1 style="padding: 100px;">Show What is Calisthenics <input type="checkbox" ng-model="myCheck"></h1>
+
+<div ng-show="myCheck" class="what">
+  <h1 style="font-size: 200%; color: #14274e;"> What is Calisthenics?</h1>
+  <p style=" color: #14274e; font-size: 130%"> Calisthenics or Callisthenics is a form of strength training consisting of a variety of movements that exercise large muscle groups, such as running, standing, grasping, pushing, etc. These exercises are often performed rhythmically and with minimal equipment, as bodyweight exercises.</p>
+</div>
+
+<div class="fixed">
+<p style="font-size: 130%;">Have a good day;</p>
+</div>
+
+<iframe style="position: relative; left: 100px;" width="560" height="315" src="https://www.youtube.com/embed/mvJHw64fxgQ" frameborder="0"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="split left">
+<div class="about">
+  <a name="abt"></a>
+  <h1 style="text-align:center; font-size: 200%;font-family: Housky;color: #14274e;"> ABOUT US</h1>
+  <p style=" color: #14274e; font-size: 130%">Calisthenics Community is such a place where people feel comfortable with failing at accomplishing their daily fitness goal just as often as they succeed. It is only through failure that one truly grows. So, building a fitness community is basically building a place where failure is not the end of the world. And to promote and create a positive calisthenics environment, we organize events at an international level. And we have various local training groups too! To have a look at our training park, click <a href="http://elysiumcalipark.com/">here.</a></p>
+</div>
+</div>
+<div class="split righ">
+  <img src="caliimg1.jpg" alt="Workplace" usemap="#workmap">
+
+<map name="workmap">
+  <area shape="rect" coords="0,0,500,500" alt="Computer" href="http://elysiumcalipark.com/">
+</map>
+</div>
+<hr>
+
+<div class="events">
+<a name="eve"></a>
+<h1> Events </h1>
+</div>
+<div class="des"></div>
+<p style="font-size: 50px; color:#14274e; text-align: center;"> Upcoming Event! Battle of the bars @ 30th March</p>
+<div class="des"></div>
+<video width=100% height="600px" controls>
+  <source src="calivid.mp4" type="video/mp4">
+  <source src="calivid.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1 style="text-align:center; font-size: 200%;font-family: Housky;color: #14274e;">Categories</h1>
+
+<a href="#!5k">5Km</a>
+<a href="#!10k">10Km</a>
+<a href="#!hm">Half Marathon</a>
+
+<div ng-view></div>
+
+<script>
+var app = angular.module("myapp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/5k", {
+        template : "<h1>5Km</h1><p>It is a course covering a distance of 5km with around 20 obstacles.</p>"
+    })
+    .when("/10k", {
+        template : "<h1>10Km</h1><p>It is a course covering a distance of 10km with around 40 obstacles.</p>"
+    })
+    .when("/hm", {
+        template : "<h1>Half Marathon</h1><p>It is a course covering a distance of 21km with no obstacles.</p>"
+    });
+});
+</script>
+
+<table style="width:100%; color:#14274e;">
+  <tr>
+    <th>Podium</th>
+    <th>Award</th> 
+    <th>Prize</th>
+  </tr>
+  <tr>
+    <td>1st</td>
+    <td>Diamond Warrior</td>
+    <td>$100000</td>
+  </tr>
+  <tr>
+    <td>2nd</td>
+    <td>Golden Warrior</td>
+    <td>$50000</td>
+  </tr>
+  <tr>
+    <td>3rd</td>
+    <td>Bronze Warrior</td>
+    <td>$25000</td>
+  </tr>
+</table>
+
+<div class= "reg">
+<a name="regi"></a>
+<h1>Register Here!</h1>
+<form>  
+     <fieldset>  
+        <legend>Battle of the Bars 2021</legend>  
+        <label>Enter your full name</label> 
+        <input type="text" name="name"><br>  
+         <label>Enter your email</label>  
+         <input type="email" name="email"><br>  
+         <label>Select your dob</label>  
+         <input type="date" name="dob"><br> 
+         <label>Enter your age</label>  
+         <input type="text" name="age"><br> 
+         <br><label>Select your weight category</label><br>  
+         <input type="radio" id="weight" name="weight" value="u50"/>u50  <br>  
+         <input type="radio" id="weight" name="weight" value="u75"/>u75 <br/>    
+         <input type="radio" id="weight" name="weight" value="u100"/>u100 <br/>   
+          <br>Enter your Address:</br>  
+         <textarea></textarea><br>  
+         <input type="submit" value="Register">  
+     </fieldset>  
+  </form> 
+</div> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<button id="myBtn">Click here for a surprise</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("myBtn");
+x.addEventListener("mouseover", myFunction);
+x.addEventListener("click", mySecondFunction);
+
+
+function myFunction() {
+  document.getElementById("demo").innerHTML += "Get Ready!<br>";
+}
+
+function mySecondFunction() {
+  document.getElementById("demo").innerHTML += "Congrats!You have won 30% discount in the ticket prices.<br>";
+}
+
+
+</script>
+
+<footer> 
+<div class="column">
+            <nav> 
+                <p> 
+                    <a href="#abt">About</a>|
+  <a href="#eve">Events</a>|
+  <a href="#regi">Register</a>  
+                </p> 
+            </nav> 
+            <p>@Calisthenics Community, Some rights reserved</p> 
+</div>
+<div class="column">
+<ul style= "text-align: center;"> 
+                    <li>Instagram: @merattal_michael</li> 
+                    <li>Facebook: @Michael_Victor</li> 
+                    <li>Email: michael@gmail.com</li> 
+                    
+                </ul> 
+</div>
+        </footer> 
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+.wel {
+position: relative;
+left: 650px;
+}
+
+input[type=text], input[type=password], input[type=tel] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=tel]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+button {
+  background-color: #14274e;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #14274e;
+}
+
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+
+.container {
+  padding: 16px;
+}
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.time {
+  postion: relative;
+  float : right;
+  
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<script type = "text/javascript">
+   
+      function validateform() {
+  	var mid = document.forms["myform"]["email"].value;
+  	
+  	var pwd = document.forms["myform"]["password"].value;
+  	var pwd1 = document.forms["myform"]["psw-repeat"].value;
+  	
+  	var mreg = /[a-zA-Z0-9]+@+[a-z]+.+[a-z]/
+  	
+  	if (!mreg.test(mid)) {
+    	alert("Invalid mail id")
+    	return false;
+	}
+        
+        errors = [];
+    if (pwd.length < 8) {
+        errors.push("Your password must be at least 8 characters"); 
+    }
+    if (pwd.search(/[a-z]/) < 0) {                         
+        errors.push("Your password must contain at least one lowercase letter.")                     
+    }                  
+   if (pwd.search(/[A-Z]/) < 0) {                     
+    errors.push("Your password must contain at least one uppercase letter.")                
+     }
+    if (pwd.search(/[0-9]/) < 0) {
+        errors.push("Your password must contain at least one digit."); 
+    }
+    if (errors.length > 0) {
+        alert(errors.join("\n"));
+        return false;
+    }
+    
+
+	 
+	
+}
+   
+</script>
+
+</head>
+<body>
+
+
+<div class="wel">
+<svg height="170" width="1000">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"
+      style="stop-color:#14274e;stop-opacity:1" />
+      <stop offset="100%"
+      style="stop-color:#9ba4b4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="150" cy="70" rx="105" ry="55" fill="url(#grad1)" />
+  <text fill="#ffffff" font-size="45" font-family="Verdana"
+  x="50" y="86">Welcome</text>
+Sorry, your browser does not support inline SVG.
+</svg>
+</div>
+
+<form name="myform" action="insert.php" method="POST" onsubmit="return validateform()">
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="pswrepeat" required>
+    
+    <label for="phno"><b>Phone Number</b></label>
+    <input type="tel" placeholder="Phone Number" name="phno" pattern="[0-9]{10}" required>
+
+    <label for="age"><b>Age</b></label>
+    <input type="tel" placeholder="Age" name="age" pattern="[0-9]{2}" required>
+    
+    
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn" >Sign Up</button>
+    </div>
+  </div>
+</form>
+
+
+<div class="time" ng-app="myApp" ng-controller="myCtrl">
+<h1>{{theTime}}</h1>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
+});
+</script>
+
+</body>
+</html>
